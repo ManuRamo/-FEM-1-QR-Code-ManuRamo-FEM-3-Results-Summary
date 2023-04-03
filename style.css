@@ -1,0 +1,234 @@
+@font-face{
+    font-family: "Hanken";
+    src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+    font-weight: 100;
+}
+
+@font-face{
+    font-family: "Hanken";
+    src: url(assets/fonts/static/HankenGrotesk-Medium.ttf);
+    font-weight: 200;
+}
+
+@font-face{
+    font-family: "Hanken";
+    src: url(assets/fonts/static/HankenGrotesk-Bold.ttf);
+    font-weight: 300;
+}
+
+@font-face{
+    font-family: "Hanken";
+    src: url(assets/fonts/static/HankenGrotesk-ExtraBold.ttf);
+    font-weight: 400;
+}
+
+/* ---- Project ---- */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    max-width: 90%;
+    background-color: whitesmoke;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+/* ---- Left Container ---- */
+
+.left-container{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    padding: 1.5rem;
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    border-radius: 1.5rem;
+}
+
+.left-container > *{
+    width: 100%;
+}
+
+.left-container .title-left h1{
+    font-family: "Hanken";
+    font-weight: 200;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.left-container .score-circle{
+    width: 60%;
+    aspect-ratio: 1/1;
+    clip-path: circle();
+    background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.left-container .score-circle h1{
+    src: url(assets/fonts/static/HankenGrotesk-ExtraBold.ttf);
+    font-size: 3rem;
+}
+
+.left-container .score-circle p{
+    font-family: "Henken";
+    font-weight: 100;
+    font-size: .8rem;
+    opacity: .5;
+}
+
+.left-container .bottom-text{
+    max-width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.left-container .bottom-heading{
+    font-family: "Hanken";
+    font-weight: 200;
+    font-size: 1.7rem;
+}
+
+.left-container .bottom-par{
+    font-family: "Hanken";
+    font-weight: 100;
+    font-size: .9rem;
+    margin-top: 20px;
+}
+
+/* ---- Right Container ---- */
+
+.right-container{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.right-container > *{
+    width: 100%;
+}
+
+.right-container .title-right h1{
+    font-family: "Hanken";
+    font-weight: 200;
+    font-size: 1.5rem;
+    color: black;
+    text-align: left;
+}
+
+.right-container .parameter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: .7rem;
+    border-radius: .5rem;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.right-container .parameter .left-side{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.right-container h2{
+    font-family: "Hanken";
+    font-weight: 200;
+    font-size: 1rem;
+}
+
+.right-container span{
+    opacity: .5;
+}
+
+.right-container .p1{
+    background-color: hsl(0, 100%, 67%, 10%);
+}
+
+.right-container .p2{
+    background-color: hsl(39, 100%, 56%, 10%);
+}
+
+.right-container .p3{
+    background-color: hsl(166, 100%, 37%, 10%);
+}
+
+.right-container .p4{
+    background-color: hsl(234, 85%, 45%, 10%);
+}
+
+.right-container .p1 .left-side h2{
+    color: hsl(0, 100%, 67%);
+}
+
+.right-container .p2 .left-side h2{
+    color: hsl(39, 100%, 56%);
+}
+
+.right-container .p3 .left-side h2{
+    color: hsl(166, 100%, 37%);
+}
+
+.right-container .p4 .left-side h2{
+    color: hsl(234, 85%, 45%);
+}
+
+.right-container .continue-btn{
+    padding: .7rem;
+    border: none;
+    outline: none;
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    border-radius: 1.5rem;
+    color: white;
+}
+
+@media (max-width: 550px){
+    .container{
+        flex-direction: column;
+    }
+
+    .left-container{
+        width: 100%;
+    }
+
+    .left-container .score-circle{
+        width: 40%;
+    }
+
+    .right-container{
+        width: 100%;
+    }
+
+    .right-container > *:not(:last-child){
+        margin-bottom: 1rem;
+    }
+
+
+}
